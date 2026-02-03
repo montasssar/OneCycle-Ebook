@@ -22,13 +22,13 @@ export function CoverView() {
                 </div>
             </div>
 
-            {/* CTA Overlay - Centered safely */}
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
+            {/* CTA Overlay - Positioned at bottom */}
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-16 pointer-events-none">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.0, duration: 1.0 }}
-                    className="pointer-events-auto mt-[40vh]" // Push slightly below center to avoid covering the main art
+                    transition={{ delay: 3.0, duration: 1.5 }}
+                    className="pointer-events-auto"
                 >
                     <Link
                         href="/contents"

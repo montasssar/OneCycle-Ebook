@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Home } from "lucide-react";
 import type { Poem } from "@/lib/poems/api";
 
 interface PoemNavProps {
@@ -26,7 +26,14 @@ export function PoemNav({ prev, next }: PoemNavProps) {
                 )}
             </div>
 
-            <div className="flex-0 mx-4">
+            <div className="flex-0 mx-4 flex space-x-4">
+                <Link
+                    href="/"
+                    className="p-2 hover:text-gold transition-colors"
+                    title="Back to Cover"
+                >
+                    <Home className="w-5 h-5" />
+                </Link>
                 <Link
                     href="/contents"
                     className="p-2 hover:text-gold transition-colors"
